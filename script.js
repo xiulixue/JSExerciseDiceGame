@@ -13,6 +13,7 @@ const btnNew = document.querySelector('.btn--new');
 const btnRoll = document.querySelector('.btn--roll');
 const btnHold = document.querySelector('.btn--hold');
 
+//predefine state variable
 let scores, currentScore, activePlayer, playing;
 
 //initial before start
@@ -75,7 +76,7 @@ btnHold.addEventListener('click', function () {
       scores[activePlayer];
 
     //2. check if player's score ==100
-    if (scores[activePlayer] >= 20) {
+    if (scores[activePlayer] >= 100) {
       //yes finish the game
       playing = false; //when a player wins, playing stop
       diceEl.classList.add('hidden'); //the dice disappear
